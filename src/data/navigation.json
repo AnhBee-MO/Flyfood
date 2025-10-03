@@ -1,0 +1,12 @@
+[
+  { "key": "branding", "label": "Quản lý thương hiệu", "href": "/branding" },
+  { "key": "product", "label": "Quản lý sản phẩm", "href": "/product" },
+  { "key": "people", "label": "Nhân sự & phân quyền", "href": "/people" },
+  { "key": "distribution", "label": "Phân phối nguyên liệu", "href": "/distribution" },
+  { "key": "orders", "label": "Quản lý đơn hàng", "href": "/orders" },
+  { "key": "operations", "label": "Quản trị tổ sản xuất (window)", "href": "/operations" },
+  { "key": "warehouse", "label": "Quản trị kho", "href": "/warehouse" },
+  { "key": "supply", "label": "Quản trị chuỗi cung ứng & mua sắm", "href": "/supply" },
+  { "key": "productionFinish", "label": "Quản lý thành phẩm", "href": "/production-finish" }
+]
+

@@ -1,0 +1,104 @@
+[
+  {
+    "key": "prep",
+    "label": "Tổ PREP - Sơ chế",
+    "shortLabel": "PREP",
+    "tone": "emerald",
+    "shift": "14:00 - 22:00",
+    "supervisor": "Thu Phương",
+    "currentLoad": "Đang xử lý 3/6 món",
+    "responsibilities": [
+      "Nhận nguyên liệu đã staging từ kho lạnh.",
+      "Sơ chế theo checklist, ghi nhận nhiệt độ và thời gian.",
+      "Bàn giao cho tổ COOK dùng wave đã lên kế hoạch."
+    ],
+    "checkIns": [
+      { "label": "Món ưu tiên", "value": "PX-5487, PX-5489" },
+      { "label": "Tỉ lệ đúng SLA", "value": "96%" }
+    ],
+    "tasks": [
+      { "id": "PX-5487", "title": "Sơ chế gỏi gà xé phay", "linkedOrder": "DH-5487", "status": "doing", "eta": "12 phút", "priority": "Cao" },
+      { "id": "PX-5489", "title": "Chuẩn bị rau củ bò lúc lắc", "linkedOrder": "DH-5492", "status": "waiting", "eta": "Wave 2 - 25 phút", "priority": "Chuẩn" },
+      { "id": "PX-5510", "title": "Sơ chế cá hồi", "linkedOrder": "DH-5501", "status": "todo", "eta": "Wave 3 - 45 phút", "priority": "Theo dõi" }
+    ],
+    "handoff": { "to": "Tổ COOKING", "sla": "Sớm hơn thời điểm nấu 5 phút", "criteria": ["Checklist hoàn tất", "Nhiệt độ bảo quản đạt", "Tem wave đầy đủ"] },
+    "alerts": ["Rau răm wave 2 còn thiếu"]
+  },
+  {
+    "key": "cooking",
+    "label": "Tổ COOKING - Bếp nấu",
+    "shortLabel": "COOK",
+    "tone": "sky",
+    "shift": "10:00 - 18:00 | 18:00 - 02:00",
+    "supervisor": "Chef Nghĩa",
+    "currentLoad": "7 món đang nấu",
+    "responsibilities": [
+      "Xác nhận bàn giao từ PREP và cập nhật checklist.",
+      "Nấu theo SOP, ghi nhận nhiệt độ lõi và thời gian.",
+      "Gửi cảnh báo nếu món chậm, bàn giao QC kịp wave."
+    ],
+    "checkIns": [
+      { "label": "Món chậm", "value": "Bò lúc lắc (-6 phút)" },
+      { "label": "Wave active", "value": "Wave 2 - 4 món" }
+    ],
+    "tasks": [
+      { "id": "PX-5489", "title": "Bò lúc lắc", "linkedOrder": "DH-5492", "status": "risk", "eta": "Chờ hành tây", "priority": "Cao" },
+      { "id": "PX-5510", "title": "Canh chua cá hồi", "linkedOrder": "DH-5501", "status": "doing", "eta": "18 phút", "priority": "Chuẩn" }
+    ],
+    "handoff": { "to": "Tổ QC", "sla": "Trong vòng 8 phút sau khi kết thúc món", "criteria": ["Checklist ký bởi bếp trưởng", "Log nhiệt độ", "Món đã phân nếu có"] },
+    "alerts": ["Bếp 03 cần vệ sinh trước 18:00"]
+  },
+  {
+    "key": "sauce",
+    "label": "Tổ SAUCE - Nước dùng",
+    "shortLabel": "SAUCE",
+    "tone": "amber",
+    "shift": "09:00 - 17:00",
+    "supervisor": "Thành Công",
+    "currentLoad": "5 mẻ đang chạy",
+    "responsibilities": ["Nấu nước dùng nền.", "Chuẩn hoá thời hạn.", "Cấp phát đúng wave."],
+    "checkIns": [ { "label": "Mẻ hôm nay", "value": "12" }, { "label": "Sai lệch vị", "value": "0" } ],
+    "tasks": [],
+    "handoff": { "to": "Tổ COOKING", "sla": "Đủ trước giờ nấu 10 phút", "criteria": ["Nhiệt độ đạt", "Tem kiểm soát", "Log batch"] }
+  },
+  {
+    "key": "dessert",
+    "label": "Tổ DESSERT - Tráng miệng",
+    "shortLabel": "DESSERT",
+    "tone": "rose",
+    "shift": "07:00 - 15:00",
+    "supervisor": "Mỹ Hạnh",
+    "currentLoad": "3 batch",
+    "responsibilities": ["Chuẩn bị tráng miệng", "Đảm bảo vệ sinh"],
+    "checkIns": [],
+    "tasks": [],
+    "handoff": { "to": "Tổ QC", "sla": "5 phút", "criteria": ["Checklist", "Nhiệt độ"] }
+  },
+  {
+    "key": "plating",
+    "label": "Tổ PLATING - Ra món",
+    "shortLabel": "PLATING",
+    "tone": "emerald",
+    "shift": "Cả ngày",
+    "supervisor": "Team Lead",
+    "currentLoad": "Đang xử lý 5/10",
+    "responsibilities": ["Ra món", "Đóng gói"],
+    "checkIns": [],
+    "tasks": [],
+    "handoff": { "to": "Tổ QC", "sla": "3 phút", "criteria": ["Tem", "Đủ món"] }
+  },
+  {
+    "key": "qc",
+    "label": "Tổ QC - Kiểm định",
+    "shortLabel": "QC",
+    "tone": "sky",
+    "shift": "Cả ngày",
+    "supervisor": "Gia Bảo",
+    "currentLoad": "2/6 việc",
+    "responsibilities": ["QC theo checklist", "Bàn giao logistics"],
+    "checkIns": [],
+    "tasks": [],
+    "handoff": { "to": "Tổ giao vận", "sla": "5 phút", "criteria": ["Biên bản ký", "Ảnh kiện hàng", "Log nhiệt độ"] }
+  }
+]
+

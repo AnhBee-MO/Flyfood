@@ -1,0 +1,18 @@
+{
+  "branding": [
+    { "label": "Danh sách thương hiệu", "href": "/branding" },
+    { "label": "Quản lý cấu hình", "href": "/branding/settings" }
+  ],
+  "product": [
+    { "label": "Danh mục nguyên liệu", "href": "/product/ingredient-categories" },
+    { "label": "Danh sách nguyên liệu thô", "href": "/product/ingredients" },
+    { "label": "Món thương hiệu", "href": "/product/brand-menus" }
+  ],
+  "people": [
+    { "label": "Quản lý nhân viên", "href": "/people/staff" },
+    { "label": "Phân quyền nhân viên", "href": "/people/permissions" },
+    { "label": "Chấm công", "href": "/people/timekeeping" },
+    { "label": "Ca làm việc", "href": "/people/shifts" }
+  ]
+}
+

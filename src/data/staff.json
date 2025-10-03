@@ -1,0 +1,63 @@
+[
+  {
+    "id": "EMP-1001",
+    "name": "Quốc Thái",
+    "role": "Lead CSKH",
+    "shift": "07:00 - 15:00",
+    "teamKey": null,
+    "brandId": "BR-001",
+    "permissions": ["Xem/duyệt đơn", "Chuyển đơn sang kế hoạch"],
+    "status": "Tạm ngưng"
+  },
+  {
+    "id": "EMP-1020",
+    "name": "Thu Phương",
+    "role": "Tổ trưởng PREP",
+    "shift": "14:00 - 22:00",
+    "teamKey": "prep",
+    "brandId": "BR-001",
+    "permissions": ["Truy cập PREP", "Cập nhật checklist", "Bàn giao COOK"],
+    "status": "Tạm ngưng"
+  },
+  {
+    "id": "EMP-1032",
+    "name": "Hậu Nghĩa",
+    "role": "Bếp trưởng",
+    "shift": "10:00 - 18:00",
+    "teamKey": "cooking",
+    "brandId": "BR-002",
+    "permissions": ["Truy cập COOK", "Gửi cảnh báo QC", "Yêu cầu bổ sung sơ chế"],
+    "status": "Đang làm"
+  },
+  {
+    "id": "EMP-1045",
+    "name": "Gia Bảo",
+    "role": "Lead QC",
+    "shift": "17:00 - 01:00",
+    "teamKey": "qc",
+    "brandId": "BR-001",
+    "permissions": ["Truy cập QC", "Khóa checklist", "Bàn giao giao vận"],
+    "status": "Đang làm"
+  },
+  {
+    "id": "EMP-1058",
+    "name": "Mỹ Hạnh",
+    "role": "Lead Dessert",
+    "shift": "07:00 - 15:00",
+    "teamKey": "dessert",
+    "brandId": "BR-003",
+    "permissions": ["Truy cập Dessert", "Tạo batch", "Bàn giao QC"],
+    "status": "Đang làm"
+  },
+  {
+    "id": "EMP-1080",
+    "name": "Bảo Long",
+    "role": "Điều phối giao vận",
+    "shift": "16:00 - 00:00",
+    "teamKey": "logistics",
+    "brandId": "BR-001",
+    "permissions": ["Nhận checklist QC", "Theo dõi tuyến", "Ghi nhận bàn giao"],
+    "status": "Đang làm"
+  }
+]
+

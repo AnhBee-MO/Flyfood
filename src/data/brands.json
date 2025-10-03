@@ -1,0 +1,69 @@
+[
+  {
+    "id": "BR-001",
+    "name": "Flyfood Wedding",
+    "category": "Sự kiện đẳng cấp",
+    "channel": "Facebook, Landing",
+    "status": "Hoạt động",
+    "manager": "Trần Lê",
+    "lastUpdated": "2025-09-25",
+    "activeCampaigns": 4,
+    "reach": "45.2K"
+  },
+  {
+    "id": "BR-002",
+    "name": "Combo Tết",
+    "category": "Người dùng hiện hữu",
+    "channel": "App nội bộ",
+    "status": "Hoạt động",
+    "manager": "Hải Dương",
+    "lastUpdated": "2025-09-18",
+    "activeCampaigns": 2,
+    "reach": "17.8K"
+  },
+  {
+    "id": "BR-003",
+    "name": "Bao bì mới",
+    "category": "Nhận diện thương hiệu",
+    "channel": "POS, Offline",
+    "status": "Hoạt động",
+    "manager": "Quỳnh Kim",
+    "lastUpdated": "2025-09-20",
+    "activeCampaigns": 3,
+    "reach": "12.4K"
+  },
+  {
+    "id": "BR-004",
+    "name": "Thế Cà Phê",
+    "category": "Hợp tác",
+    "channel": "Zalo OA",
+    "status": "Tạm ngưng",
+    "manager": "Anh Tú",
+    "lastUpdated": "2025-09-12",
+    "activeCampaigns": 1,
+    "reach": "6.1K"
+  },
+  {
+    "id": "BR-005",
+    "name": "Siêu thị online",
+    "category": "Kênh thương mại",
+    "channel": "TikTok Shop",
+    "status": "Hoạt động",
+    "manager": "Mỹ Linh",
+    "lastUpdated": "2025-09-24",
+    "activeCampaigns": 5,
+    "reach": "33.0K"
+  },
+  {
+    "id": "BR-006",
+    "name": "Đối tác doanh nghiệp",
+    "category": "Khách hàng B2B",
+    "channel": "Email, Webinar",
+    "status": "Hoạt động",
+    "manager": "Bảo Ngọc",
+    "lastUpdated": "2025-09-22",
+    "activeCampaigns": 2,
+    "reach": "9.7K"
+  }
+]
+

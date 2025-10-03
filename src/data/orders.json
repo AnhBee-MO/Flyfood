@@ -1,0 +1,70 @@
+[
+  {
+    "code": "FL001",
+    "customerName": "Nguyễn Minh Quân",
+    "customerPhone": "0903 123 456",
+    "customerAddress": "25 Lê Lợi, Quận 1",
+    "brand": "Flyfood Premium",
+    "status": "pending",
+    "orderedAt": "2025-09-29T10:29",
+    "total": 1250000,
+    "paymentStatus": "Chưa thanh toán",
+    "shippingContact": { "name": "Trần Anh", "phone": "0908 111 222" },
+    "items": [
+      { "name": "Gà bó xôi", "quantity": 1, "price": 300000, "note": "ít cay" },
+      { "name": "Lẩu hải sản", "quantity": 1, "price": 650000 },
+      { "name": "Chè khúc bạch", "quantity": 5, "price": 60000 }
+    ]
+  },
+  {
+    "code": "FL002",
+    "customerName": "Công ty ABC",
+    "customerPhone": "028 3900 8888",
+    "customerAddress": "12 Nguyễn Huệ, Quận 1",
+    "brand": "Flyfood Biz",
+    "status": "cooking",
+    "orderedAt": "2025-09-29T09:45",
+    "total": 2850000,
+    "paymentStatus": "Thanh toán COD",
+    "shippingContact": { "name": "Lê Hoàng", "phone": "0907 555 333" },
+    "items": [
+      { "name": "Bò lúc lắc", "quantity": 3, "price": 450000 },
+      { "name": "Salad Caesar", "quantity": 3, "price": 150000 },
+      { "name": "Tráng miệng trái cây", "quantity": 3, "price": 90000 }
+    ]
+  },
+  {
+    "code": "FL003",
+    "customerName": "Trần Gia Linh",
+    "customerPhone": "0938 888 999",
+    "customerAddress": "88 Phan Đăng Lưu, Phú Nhuận",
+    "brand": "Flyfood Home",
+    "status": "completed",
+    "orderedAt": "2025-09-28T18:10",
+    "total": 520000,
+    "paymentStatus": "Đã thanh toán",
+    "shippingContact": { "name": "Nguyễn Tài", "phone": "0703 123 789" },
+    "items": [
+      { "name": "Gỏi ngó sen tôm thịt", "quantity": 2, "price": 180000 },
+      { "name": "Cá hú kho tộ", "quantity": 1, "price": 160000 }
+    ]
+  },
+  {
+    "code": "FL004",
+    "customerName": "Sự kiện Metropole",
+    "customerPhone": "028 2222 9999",
+    "customerAddress": "216 Nguyễn Trãi, Quận 1",
+    "brand": "Flyfood Premium",
+    "status": "cancelled",
+    "orderedAt": "2025-09-27T14:30",
+    "total": 3420000,
+    "paymentStatus": "Chưa thanh toán",
+    "shippingContact": { "name": "Phạm Hòa", "phone": "0902 345 678" },
+    "items": [
+      { "name": "Combo hải sản đặc biệt", "quantity": 2, "price": 950000 },
+      { "name": "Súp bắp nấm", "quantity": 2, "price": 320000 },
+      { "name": "Bánh mousse", "quantity": 10, "price": 45000 }
+    ]
+  }
+]
+
