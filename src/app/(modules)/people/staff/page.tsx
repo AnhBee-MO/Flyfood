@@ -26,7 +26,7 @@ export default function StaffPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const itemsPerPage = 10;
-  const { staff: paginatedStaff, total: totalStaff, allRoles, allBrands, loading: isLoading } = useStaff({
+  const { staff: paginatedStaff, total: totalStaff, loading: isLoading } = useStaff({
     page: currentPage,
     limit: itemsPerPage,
     searchQuery,
@@ -59,6 +59,19 @@ export default function StaffPage() {
       return acc;
     }, {});
   }, [brandDirectory]);
+
+  const suspendedStatusSet = useMemo(
+    () => new Set([
+      "Tạm ngưng",
+      "Tạm khóa",
+      "Nghỉ phép",
+      // Dư phòng cho dữ liệu lỗi mã hóa
+      "T���m ng��ng",
+      "T���m khA3a",
+      "Ngh��% phAcp",
+    ]),
+    []
+  );
 
   const hasActiveFilters = searchQuery.trim().length > 0 || roleFilter !== "all" || brandFilter !== "all" || teamFilter !== "all";
 
@@ -186,7 +199,7 @@ export default function StaffPage() {
                       </ul>
                     </td>
                     <td className="px-4 py-3 align-middle text-xs">
-                      <span className="rounded-full border px-3 py-1 shadow-sm">
+                      <span className={`status-badge ${suspendedStatusSet.has(member.status) ? "status-badge--suspended" : "status-badge--active"}`}>
                         {member.status}
                       </span>
                     </td>
@@ -214,4 +227,3 @@ export default function StaffPage() {
     </div>
   );
 }
-

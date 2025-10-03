@@ -26,8 +26,8 @@ export default function BrandingPage() {
       const matchesQuery =
         normalizedQuery.length === 0 ||
         brand.name.toLowerCase().includes(normalizedQuery) ||
-        brand.category.toLowerCase().includes(normalizedQuery) ||
-        brand.manager.toLowerCase().includes(normalizedQuery);
+        (brand.category ?? "").toLowerCase().includes(normalizedQuery) ||
+        (brand.manager ?? "").toLowerCase().includes(normalizedQuery);
       const matchesStatus = statusFilter === "all" || brand.status === statusFilter;
       return matchesQuery && matchesStatus;
     });
@@ -237,4 +237,3 @@ export default function BrandingPage() {
     </div>
   );
 }
-

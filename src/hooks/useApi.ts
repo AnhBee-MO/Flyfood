@@ -6,12 +6,16 @@ import type { Brand, TeamLabel, StaffMember } from "@/types/api";
 
 export function useApi<T>(url: string) {
   const [data, setData] = useState<T | undefined>(() => getCached<T>(url));
-  const [loading, setLoading] = useState<boolean>(!Boolean(getCached<T>(url)));
+  const [loading, setLoading] = useState<boolean>(() => !Boolean(getCached<T>(url)));
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
+    const cached = getCached<T>(url);
+    setData(cached);
+    setLoading(!Boolean(cached));
+
     let cancelled = false;
-    if (!getCached<T>(url)) {
+    if (!cached) {
       (async () => {
         try {
           const json = await fetchJson<T>(url);
@@ -47,11 +51,11 @@ export function useBrands() {
 export type StaffQuery = {
   page?: number;
   limit?: number;
-  searchQuery?: string;
-  roleFilter?: string;
-  brandFilter?: string;
-  teamFilter?: string;
-  activeTab?: "active" | "suspended";
+  searchQuery: string;
+  roleFilter: string;
+  brandFilter: string;
+  teamFilter: string;
+  activeTab: "active" | "suspended";
 };
 
 export function useStaff(query: StaffQuery) {

@@ -3,11 +3,11 @@ export type TeamLabel = { key: string; label: string };
 export type Brand = {
   id: string;
   name: string;
-  category?: string;
-  channel?: string;
+  category: string;
+  channel: string;
   status: string;
-  manager?: string;
-  lastUpdated?: string;
+  manager: string;
+  lastUpdated: string;
 };
 
 export type StaffMember = {
@@ -19,11 +19,11 @@ export type StaffMember = {
   brandId: string;
   permissions: string[];
   status: string;
-  dob?: string;
-  gender?: string;
-  address?: string;
-  phone?: string;
-  email?: string;
+  dob: string;
+  gender: string;
+  address: string;
+  phone: string;
+  email: string;
 };
 
 export type OrderItem = { name: string; quantity: number; price: number; note?: string };

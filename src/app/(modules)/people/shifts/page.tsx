@@ -13,6 +13,19 @@ export default function ShiftsPage() {
     [operationsTeams]
   );
 
+  const suspendedStatusSet = useMemo(
+    () => new Set([
+      "Tạm ngưng",
+      "Tạm khóa",
+      "Nghỉ phép",
+      // Dư phòng cho dữ liệu lỗi mã hóa
+      "T���m ng��ng",
+      "T���m khA3a",
+      "Ngh��% phAcp",
+    ]),
+    []
+  );
+
   return (
     <div className="space-y-6">
       <header className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
@@ -72,7 +85,11 @@ export default function ShiftsPage() {
                       ))}
                     </ul>
                   </td>
-                  <td className="px-3 py-3 text-xs"><span className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-emerald-700">{member.status}</span></td>
+                  <td className="px-3 py-3 text-xs">
+                    <span className={`status-badge ${suspendedStatusSet.has(member.status) ? "status-badge--suspended" : "status-badge--active"}`}>
+                      {member.status}
+                    </span>
+                  </td>
                   <td className="px-3 py-3 text-right"><button className="rounded-full border border-slate-300 bg-white px-3 py-1 text-xs uppercase tracking-wide text-slate-600 hover:border-sky-200 hover:bg-sky-50 hover:text-sky-700">Thu hồi quyền</button></td>
                 </tr>
               ))}
@@ -83,4 +100,3 @@ export default function ShiftsPage() {
     </div>
   );
 }
-

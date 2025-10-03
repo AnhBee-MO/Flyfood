@@ -16,6 +16,19 @@ export default function PermissionsPage() {
     }, { logistics: "Giao vận" });
   }, [operationsTeams]);
 
+  const suspendedStatusSet = useMemo(
+    () => new Set([
+      "Tạm ngưng",
+      "Tạm khóa",
+      "Nghỉ phép",
+      // Dư phòng cho dữ liệu lỗi mã hóa
+      "T���m ng��ng",
+      "T���m khA3a",
+      "Ngh��% phAcp",
+    ]),
+    []
+  );
+
   return (
     <div className="space-y-6">
       <header className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
@@ -75,7 +88,11 @@ export default function PermissionsPage() {
                       ))}
                     </ul>
                   </td>
-                  <td className="px-3 py-3 text-xs"><span className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-emerald-700">{member.status}</span></td>
+                  <td className="px-3 py-3 text-xs">
+                    <span className={`status-badge ${suspendedStatusSet.has(member.status) ? "status-badge--suspended" : "status-badge--active"}`}>
+                      {member.status}
+                    </span>
+                  </td>
                   <td className="px-3 py-3 text-right"><button className="rounded-full border border-slate-300 bg-white px-3 py-1 text-xs uppercase tracking-wide text-slate-600 hover:border-rose-200 hover:bg-rose-50 hover:text-rose-700">Thu hồi</button></td>
                 </tr>
               ))}

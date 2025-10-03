@@ -1,0 +1,26 @@
+/* Shared UI patterns built with Tailwind via @apply */
+
+/* Status badges */
+.status-badge {
+  @apply rounded-full border px-3 py-1 text-xs shadow-sm inline-flex items-center gap-1;
+}
+
+.status-badge--active {
+  @apply border-emerald-200 bg-emerald-50 text-emerald-700;
+}
+
+.status-badge--suspended {
+  @apply border-slate-200 bg-slate-50 text-slate-600;
+}
+
+/* Buttons (optional primitives) */
+.btn {
+  @apply inline-flex items-center justify-center rounded-full border px-3 py-1 text-xs font-medium transition;
+}
+.btn--primary {
+  @apply border-emerald-300 bg-emerald-50 text-emerald-700 hover:bg-emerald-100;
+}
+.btn--muted {
+  @apply border-slate-300 bg-white text-slate-600 hover:border-sky-200 hover:bg-sky-50 hover:text-sky-700;
+}
+
