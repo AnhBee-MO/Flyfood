@@ -1,6 +1,7 @@
 export type TeamLabel = { key: string; label: string };
 
 export type Brand = {
+  description: string;
   id: string;
   name: string;
   category: string;

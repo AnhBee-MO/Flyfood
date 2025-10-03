@@ -38,3 +38,9 @@ export type DishFormValues = {
   allergenInfo: string;
   shelfLifeStorage: string;
 };
+
+export type BrandMenusResponse = {
+  brands: BrandRecord[];
+  categories: SelectOption[];
+  dishes: DishRecord[];
+};

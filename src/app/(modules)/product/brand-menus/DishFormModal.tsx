@@ -127,10 +127,10 @@ export default function DishFormModal({
               />
             </div>
 
-            {/* Dish Category */}
+            {/* Category */}
             <div className="sm:col-span-1">
               <label htmlFor="dish-category" className="text-sm font-medium text-slate-700">
-                Danh mục món
+                Danh mục
               </label>
               <select
                 id="dish-category"
@@ -138,7 +138,7 @@ export default function DishFormModal({
                 value={formValues.categoryId}
                 onChange={handleChange}
                 required
-                className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm transition focus:border-sky-300 focus:outline-none focus:ring-2 focus:ring-sky-200"
+                className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-2 text-sm text-slate-700 shadow-sm transition focus:border-sky-300 focus:outline-none focus:ring-2 focus:ring-sky-200"
               >
                 <option value="">Chọn danh mục</option>
                 {categoryOptions.map((option) => (
@@ -160,12 +160,12 @@ export default function DishFormModal({
                 value={formValues.brandId}
                 onChange={handleChange}
                 required
-                className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm transition focus:border-sky-300 focus:outline-none focus:ring-2 focus:ring-sky-200"
+                className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-2 text-sm text-slate-700 shadow-sm transition focus:border-sky-300 focus:outline-none focus:ring-2 focus:ring-sky-200"
               >
                 <option value="">Chọn thương hiệu</option>
-                {brandOptions.map((option) => (
-                  <option key={option.id} value={option.id}>
-                    {option.name}
+                {brandOptions.map((brand) => (
+                  <option key={brand.id} value={brand.id}>
+                    {brand.name}
                   </option>
                 ))}
               </select>
@@ -181,7 +181,7 @@ export default function DishFormModal({
                 name="sellingUnit"
                 value={formValues.sellingUnit}
                 onChange={handleChange}
-                placeholder="VD: Phần, Đĩa, Ly"
+                placeholder="VD: Phần, Tô, Ly"
                 className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-2 text-sm text-slate-700 shadow-sm transition focus:border-sky-300 focus:outline-none focus:ring-2 focus:ring-sky-200"
               />
             </div>
@@ -201,7 +201,7 @@ export default function DishFormModal({
                     setFormValues((prev) => ({ ...prev, imageFileName: files[0].name }));
                   }
                 }}
-                className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm transition focus:border-sky-300 focus:outline-none focus:ring-2 focus:ring-sky-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100"
+                className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm transition focus:border-sky-300 focus:outline-none focus:ring-2 focus:ring-sky-200 file:mr-4 file:rounded-full file:border-0 file:bg-emerald-50 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-emerald-700 hover:file:bg-emerald-100"
               />
               {formValues.imageFileName && (
                 <p className="mt-2 text-xs text-slate-500">Đã chọn: {formValues.imageFileName}</p>
@@ -243,7 +243,7 @@ export default function DishFormModal({
             {/* Allergen Information */}
             <div className="sm:col-span-2">
               <label htmlFor="dish-allergen-info" className="text-sm font-medium text-slate-700">
-                Thông tin về chất gây dị ứng
+                Thành phần dễ dị ứng
               </label>
               <textarea
                 id="dish-allergen-info"

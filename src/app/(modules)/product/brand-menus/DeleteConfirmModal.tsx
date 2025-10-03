@@ -27,7 +27,8 @@ export default function DeleteConfirmModal({ isOpen, itemName, onCancel, onConfi
           <h4 className="text-lg font-semibold text-rose-600">Xóa món ăn?</h4>
         </div>
         <div className="px-6 py-4 text-sm text-slate-600">
-          Món ăn <span className="font-semibold text-slate-900">{itemName}</span> sẽ bị xóa khỏi danh sách và không còn khả dụng. Bạn có chắc chắn muốn tiếp tục?
+          Món ăn <span className="font-semibold text-slate-900">{itemName}</span> sẽ bị xóa khỏi danh sách và không
+          thể khôi phục. Bạn có chắc chắn muốn tiếp tục?
         </div>
         <div className="flex flex-col-reverse gap-3 border-t border-slate-100 px-6 py-4 sm:flex-row sm:justify-end">
           <button
