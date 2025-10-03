@@ -199,7 +199,14 @@ export default function StaffPage() {
                       </ul>
                     </td>
                     <td className="px-4 py-3 align-middle text-xs">
-                      <span className={`status-badge ${suspendedStatusSet.has(member.status) ? "status-badge--suspended" : "status-badge--active"}`}>
+                      <span
+                        className={
+                          "rounded-full border px-3 py-1 text-xs shadow-sm " +
+                          (suspendedStatusSet.has(member.status)
+                            ? "border-slate-200 bg-slate-50 text-slate-600"
+                            : "border-emerald-200 bg-emerald-50 text-emerald-700")
+                        }
+                      >
                         {member.status}
                       </span>
                     </td>
